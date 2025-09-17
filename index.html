@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zunaisha's 1st Birthday Invitation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Comic+Neue:wght@300;400;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: linear-gradient(135deg, #e6e6fa 0%, #d8bfd8 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .card {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(128, 0, 128, 0.25);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-border {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 3px dashed #9370db;
+            border-radius: 20px;
+            pointer-events: none;
+        }
+        
+        .header {
+            margin-bottom: 20px;
+        }
+        
+        .unicorn-container {
+            position: relative;
+            margin: 10px 0 25px;
+        }
+        
+        .unicorn {
+            font-size: 80px;
+            margin: 0;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 5px 5px rgba(147, 112, 219, 0.4));
+        }
+        
+        .stars {
+            position: absolute;
+            font-size: 24px;
+            color: #9370db;
+        }
+        
+        .star1 {
+            top: 10px;
+            left: 30%;
+            animation: twinkle 2s infinite;
+        }
+        
+        .star2 {
+            top: 30px;
+            right: 25%;
+            animation: twinkle 3s infinite 0.5s;
+        }
+        
+        .star3 {
+            bottom: 20px;
+            left: 20%;
+            animation: twinkle 2.5s infinite 1s;
+        }
+        
+        h1 {
+            color: #4B0082;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 0px rgba(147, 112, 219, 0.3);
+        }
+        
+        h2 {
+            color: #9370DB;
+            font-size: 24px;
+            margin: 15px 0;
+            font-weight: 400;
+        }
+        
+        .message {
+            background: linear-gradient(135deg, #f0e6ff 0%, #e6d4ff 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            border: 2px solid #d8bfd8;
+        }
+        
+        .message p {
+            color: #4B0082;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .name {
+            color: #8A2BE2;
+            font-size: 42px;
+            font-weight: bold;
+            margin: 25px 0;
+            text-shadow: 3px 3px 0px rgba(147, 112, 219, 0.2);
+            font-family: 'Short Stack', cursive;
+        }
+        
+        .date {
+            background: linear-gradient(135deg, #4B0082 0%, #8A2BE2 100%);
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(139, 0, 139, 0.3);
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: confetti-fall 5s linear infinite;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #9370DB;
+            font-size: 16px;
+            font-style: italic;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.3; transform: scale(0.8); }
+        }
+        
+        @keyframes confetti-fall {
+            0% { 
+                transform: translateY(-100px) rotate(0deg); 
+                opacity: 0.7;
+            }
+            100% { 
+                transform: translateY(500px) rotate(360deg); 
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .card {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .name {
+                font-size: 36px;
+            }
+            .date {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-border"></div>
+        
+        <div class="header">
+            <h1>Happy 1st Birthday</h1>
+            <h2>TO A SPECIAL LITTLE GIRL</h2>
+        </div>
+        
+        <div class="unicorn-container">
+            <div class="unicorn">🦄</div>
+            <div class="stars star1">★</div>
+            <div class="stars star2">★</div>
+            <div class="stars star3">★</div>
+        </div>
+        
+        <div class="message">
+            <p>"To the world she is one,<br>to us she is our world."</p>
+            <p>We loved your presence as we celebrate the ONEderful Birthday of Baby</p>
+        </div>
+        
+        <div class="name">Zunaisha</div>
+        
+        <div class="date">Date: 30-October-2025</div>
+        
+        <div class="footer">
+            Join us for a magical celebration!
+        </div>
+    </div>
+
+    <script>
+        // Create confetti effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.card');
+            const colors = ['#9370DB', '#8A2BE2', '#4B0082', '#E6E6FA', '#FFB6C1'];
+            
+            for (let i = 0; i < 40; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = (8 + Math.random() * 10) + 'px';
+                confetti.style.height = confetti.style.width;
+                
+                // Random shapes
+                if (Math.random() > 0.7) {
+                    confetti.style.borderRadius = '0';
+                    confetti.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+                }
+                
+                card.appendChild(confetti);
+            }
+        });
+    </script>
+</body>
+</html>
